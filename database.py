@@ -5,6 +5,7 @@ import json
 from datetime import datetime, timedelta
 import hashlib
 import secrets
+from urllib.parse import urlparse
 
 def get_db_connection():
     url = urlparse(os.environ.get("DATABASE_URL"))
