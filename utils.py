@@ -27,14 +27,13 @@ def get_gemini_response(prompt: str, model: str = "gemini-2.5-flash") -> str:
             st.error("Gemini AI client not initialized")
             return ""
         
-        response = client.models.generate_content(
-            model=model,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                max_output_tokens=4096,
-                temperature=0.7
-            )
+        response = client.generate_content(
+        prompt,
+        generation_config=types.GenerationConfig(
+            temperature=0.2
         )
+    )
+
         return response.text if response.text else ""
     except Exception as e:
         st.error(f"AI processing error: {str(e)}")
