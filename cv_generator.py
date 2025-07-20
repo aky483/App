@@ -118,15 +118,13 @@ def generate_cv(resume_text, job_description, target_match, template, sections, 
         if not client:
             raise Exception("Gemini AI client not initialized")
         
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="text/plain",
-                temperature=0.2  # Lower temperature for more focused output
-            )
+        response = client.generate_content(
+        prompt,
+        generation_config=types.GenerationConfig(
+            temperature=0.2
         )
-        
+    )
+            
         # Handle different response conditions
         if not response:
             raise Exception("No response received from AI")
@@ -223,10 +221,12 @@ def generate_cover_letter(resume_text, job_description):
         if not client:
             raise Exception("Gemini AI client not initialized")
         
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt
+        response = client.generate_content(
+        prompt,
+        generation_config=types.GenerationConfig(
+            temperature=0.2
         )
+    )
         
         if not response or not response.text:
             raise Exception("AI response was empty or None")
@@ -287,13 +287,12 @@ def analyze_cv_ats_score(cv_content, job_description):
         if not client:
             raise Exception("Gemini AI client not initialized")
         
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json"
-            )
+        response = client.generate_content(
+        prompt,
+        generation_config=types.GenerationConfig(
+            temperature=0.2
         )
+    )
         
         if not response or not response.text:
             raise Exception("AI response was empty or None")
