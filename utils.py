@@ -3,7 +3,7 @@ import os
 import time
 from typing import Dict, List, Any
 import google.generativeai as genai
-from google.genai import types
+from google.generativeai import types
 import streamlit as st
 from dotenv import load_dotenv
 
