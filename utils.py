@@ -13,10 +13,12 @@ os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 
 # Initialize Gemini client
 try:
-    client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+    client = genai.GenerativeModel("gemini-2.5-flash")
 except Exception as e:
     print(f"Error initializing Gemini client in utils: {e}")
     client = None
+
 
 def get_gemini_response(prompt: str, model: str = "gemini-2.5-flash") -> str:
     """Get response from Gemini AI with error handling"""
