@@ -7,7 +7,9 @@ from google.generativeai import types
 import streamlit as st
 from dotenv import load_dotenv
 
-load_dotenv()
+# Load secrets into environment
+os.environ["DATABASE_URL"] = st.secrets["DATABASE_URL"]
+os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 
 # Initialize Gemini client
 try:
