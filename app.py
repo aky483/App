@@ -24,7 +24,7 @@ from utils import optimize_keywords, enforce_page_limit, get_gemini_response
 
 # Load secrets into environment
 os.environ["DATABASE_URL"] = st.secrets["DATABASE_URL"]
-os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 
 # Initialize database
 init_db()
