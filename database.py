@@ -7,13 +7,13 @@ import hashlib
 import secrets
 
 def get_db_connection():
-    
+    url = urlparse(os.environ.get("DATABASE_URL"))
     return psycopg2.connect(
-        host="localhost",
-        port=5432,
-        database="cvolvepro",
-        user="postgres",  # or 'postgres' if you're using the default user
-        password="Aakashivani@123"
+        database=url.path[1:],
+        user=url.username,
+        password=url.password,
+        host=url.hostname,
+        port=url.port
     )
 
 def init_db():
