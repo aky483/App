@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Guide - CVCraft</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: #4a5568;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            color: #2d3748;
+            margin-top: 25px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .step-box {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0ff 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .tip {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+        }
+        
+        .warning {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+            margin: 20px 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .feature-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .accordion {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .accordion-header {
+            background-color: #667eea;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+        }
+        
+        .accordion-content {
+            padding: 15px;
+            display: none;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 CVCraft Help & Guide</h1>
+        
+        <div class="step-box">
+            <h3>🚀 Welcome to CVCraft!</h3>
+            <p>Transform your resume into an ATS-optimized masterpiece in minutes. This guide will walk you through every step of the process.</p>
+        </div>
+        
+        <h2>🎯 How It Works</h2>
+        
+        <div class="step-box">
+            <h3>Step 1: Login</h3>
+            <ol>
+                <li>Choose your preferred login method (Email, Google, or LinkedIn)</li>
+                <li>For email login, enter your credentials or create a new account</li>
+                <li>You'll receive 5 free credits to get started</li>
+            </ol>
+        </div>
+        
+        <div class="step-box">
+            <h3>Step 2: Upload Your Resume</h3>
+            <ol>
+                <li>Go to the "Match Me to Job" tab</li>
+                <li>Click "Choose your resume file"</li>
+                <li>Upload your resume in PDF or DOCX format</li>
+                <li>Wait for the file to be processed</li>
+            </ol>
+        </div>
+        
+        <div class="step-box">
+            <h3>Step 3: Paste Job Description</h3>
+            <ol>
+                <li>Copy the complete job description from the job posting</li>
+                <li>Paste it into the "Job Description" text area</li>
+                <li>Include requirements, responsibilities, and preferred qualifications</li>
+                <li>The more detailed, the better the optimization</li>
+            </ol>
+        </div>
+        
+        <div class="step-box">
+            <h3>Step 4: Customize Settings</h3>
+            <ol>
+                <li>Set your target ATS match percentage (70-95%)</li>
+                <li>Choose your preferred template from the sidebar</li>
+                <li>Select which sections to include/exclude</li>
+                <li>Adjust advanced options if needed</li>
+            </ol>
+        </div>
+        
+        <div class="step-box">
+            <h3>Step 5: Generate & Download</h3>
+            <ol>
+                <li>Click "Generate Optimized CV" button</li>
+                <li>Wait 15-30 seconds for processing</li>
+                <li>Review your CV in the "CV Preview" tab</li>
+                <li>Download in PDF or Word format</li>
+            </ol>
+        </div>
+        
+        <h2>💡 Key Features</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>🎨 Professional Templates</h4>
+                <p>Choose from 5 professionally designed templates optimized for different industries and roles.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>🤖 AI-Powered Optimization</h4>
+                <p>Advanced AI analyzes job descriptions and optimizes your resume for maximum ATS compatibility.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>📊 ATS Scoring</h4>
+                <p>Get detailed analysis of how well your resume matches the job requirements with specific suggestions.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>📝 Cover Letter Generation</h4>
+                <p>Generate matching cover letters that complement your optimized resume.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>💾 Auto-Save</h4>
+                <p>Your progress is automatically saved to prevent data loss during the optimization process.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>📈 Analytics Dashboard</h4>
+                <p>Track your CV generation history, ATS scores, and improvement trends over time.</p>
+            </div>
+        </div>
+        
+        <h2>🔧 Advanced Options</h2>
+        
+        <h3>Quantitative Content Focus</h3>
+        <p>Control how much of your resume content should include numbers, percentages, and measurable achievements:</p>
+        <ul>
+            <li><strong>40-50%:</strong> Moderate use of metrics</li>
+            <li><strong>60-70%:</strong> Balanced approach (recommended)</li>
+            <li><strong>70-80%:</strong> Heavy emphasis on quantifiable results</li>
+        </ul>
+        
+        <h3>Action Verb Intensity</h3>
+        <ul>
+            <li><strong>Moderate:</strong> Standard professional verbs</li>
+            <li><strong>High:</strong> Strong, impactful action words</li>
+            <li><strong>Very High:</strong> Maximum impact verbs (use cautiously)</li>
+        </ul>
+        
+        <h3>Keyword Matching Strategy</h3>
+        <ul>
+            <li><strong>Conservative:</strong> Natural integration of keywords</li>
+            <li><strong>Balanced:</strong> Strategic keyword placement</li>
+            <li><strong>Aggressive:</strong> Maximum keyword density</li>
+        </ul>
+        
+        <h2>📋 Template Guide</h2>
+        
+        <div class="accordion">
+            <div class="accordion-header">🏢 Professional Classic</div>
+            <div class="accordion-content">
+                <p><strong>Best for:</strong> Corporate roles, traditional industries, executive positions</p>
+                <p><strong>Features:</strong> Clean layout, traditional formatting, ATS-friendly structure</p>
+                <p><strong>Industries:</strong> Finance, Legal, Healthcare, Government</p>
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">✨ Modern Minimalist</div>
+            <div class="accordion-content">
+                <p><strong>Best for:</strong> Tech roles, startups, creative agencies</p>
+                <p><strong>Features:</strong> Contemporary design, clean lines, modern typography</p>
+                <p><strong>Industries:</strong> Technology, Design, Marketing, Consulting</p>
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">🎨 Creative Design</div>
+            <div class="accordion-content">
+                <p><strong>Best for:</strong> Creative roles, design positions, artistic fields</p>
+                <p><strong>Features:</strong> Eye-catching layout, visual elements, creative formatting</p>
+                <p><strong>Industries:</strong> Graphic Design, Advertising, Media, Arts</p>
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">⚙️ Technical Focus</div>
+            <div class="accordion-content">
+                <p><strong>Best for:</strong> Technical roles, engineering positions, IT jobs</p>
+                <p><strong>Features:</strong> Skills emphasis, technical layout, clean structure</p>
+                <p><strong>Industries:</strong> Software Development, Engineering, IT, Research</p>
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">👔 Executive Premium</div>
+            <div class="accordion-content">
+                <p><strong>Best for:</strong> Senior roles, executive positions, leadership roles</p>
+                <p><strong>Features:</strong> Sophisticated design, premium appearance, executive focus</p>
+                <p><strong>Industries:</strong> Executive, C-Suite, Senior Management, Board Positions</p>
+            </div>
+        </div>
+        
+        <h2>💳 Pricing & Credits</h2>
+        
+        <div class="tip">
+            <strong>💎 Free Credits:</strong> New users get 5 free credits to try the service!
+        </div>
+        
+        <h3>Credit Packages</h3>
+        <ul>
+            <li><strong>10 Credits:</strong> $9.99 (Perfect for job seekers)</li>
+            <li><strong>25 Credits:</strong> $19.99 (Best value for active job hunting)</li>
+            <li><strong>50 Credits:</strong> $34.99 (Ideal for career changers)</li>
+        </ul>
+        
+        <h3>Subscription Plans</h3>
+        <ul>
+            <li><strong>Monthly Pro:</strong> $29.99/month - Unlimited CVs, all templates, priority support</li>
+            <li><strong>Annual Pro:</strong> $299.99/year - Everything in Monthly + 2 months free</li>
+        </ul>
+        
+        <h2>🎟️ Discount Codes</h2>
+        
+        <p>Have a discount code? Enter it in the Billing section to save on your purchase!</p>
+        
+        <div class="tip">
+            <strong>💡 Pro Tip:</strong> Follow us on social media for exclusive discount codes and promotions!
+        </div>
+        
+        <h2>❓ Frequently Asked Questions</h2>
+        
+        <div class="accordion">
+            <div class="accordion-header">How long does CV optimization take?</div>
+            <div class="accordion-content">
+                <p>Our AI typically processes your resume in 15-30 seconds. The exact time depends on the length of your resume and job description.</p>
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">What file formats are supported?</div>
+            <div class="accordion-content">
+                <p>We support PDF and DOCX (Word) formats for upload. Generated CVs can be downloaded in both PDF and Word formats.</p>
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">Is my data secure?</div>
+            <div class="accordion-content">
+                <p>Yes! We use enterprise-grade encryption and never share your resume data with third parties. See our Privacy Policy for full details.</p>
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">Can I edit the generated CV?</div>
+            <div class="accordion-content">
+                <p>The generated CV is optimized for ATS systems. You can download it in Word format to make manual edits if needed.</p>
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">What's the 2-page limit?</div>
+            <div class="accordion-content">
+                <p>All generated CVs are automatically optimized to fit exactly 2 pages - the preferred length for most employers and ATS systems.</p>
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">Do I need different CVs for different jobs?</div>
+            <div class="accordion-content">
+                <p>Yes! Each job posting has unique requirements. We recommend creating a customized CV for each application for best results.</p>
+            </div>
+        </div>
+        
+        <h2>🔍 Tips for Best Results</h2>
+        
+        <div class="tip">
+            <h4>📋 Job Description Tips</h4>
+            <ul>
+                <li>Copy the complete job posting, not just requirements</li>
+                <li>Include company culture and values sections</li>
+                <li>Don't edit or summarize - paste the full text</li>
+                <li>Multiple job descriptions = multiple optimized CVs</li>
+            </ul>
+        </div>
+        
+        <div class="tip">
+            <h4>📄 Resume Upload Tips</h4>
+            <ul>
+                <li>Use your most recent, complete resume</li>
+                <li>Include all relevant experience, not just recent jobs</li>
+                <li>Ensure your resume is well-formatted before upload</li>
+                <li>Include education, certifications, and skills sections</li>
+            </ul>
+        </div>
+        
+        <div class="tip">
+            <h4>🎯 Optimization Tips</h4>
+            <ul>
+                <li>Start with 85-90% target match for best results</li>
+                <li>Use "Balanced" keyword matching for most jobs</li>
+                <li>Choose templates that match your industry</li>
+                <li>Review the preview before downloading</li>
+            </ul>
+        </div>
+        
+        <h2>⚠️ Common Issues & Solutions</h2>
+        
+        <div class="warning">
+            <h4>🚫 Upload Issues</h4>
+            <ul>
+                <li><strong>File too large:</strong> Compress your PDF or save as a simpler format</li>
+                <li><strong>Corrupted file:</strong> Try saving your resume in a different format</li>
+                <li><strong>Unsupported format:</strong> Convert to PDF or DOCX</li>
+            </ul>
+        </div>
+        
+        <div class="warning">
+            <h4>🔄 Processing Issues</h4>
+            <ul>
+                <li><strong>Taking too long:</strong> Refresh and try again</li>
+                <li><strong>Error message:</strong> Check your internet connection</li>
+                <li><strong>Partial results:</strong> Try with a shorter job description</li>
+            </ul>
+        </div>
+        
+        <h2>📞 Support</h2>
+        
+        <p>Need help? We're here for you!</p>
+        
+        <div class="highlight">
+            <ul>
+                <li><strong>📧 Email:</strong> support@cvcraft.com</li>
+                <li><strong>⏰ Response Time:</strong> Within 24 hours</li>
+                <li><strong>📚 Documentation:</strong> This help guide</li>
+                <li><strong>💬 Live Chat:</strong> Available for Pro subscribers</li>
+            </ul>
+        </div>
+        
+        <div class="tip">
+            <h4>🎯 Pro Subscriber Benefits</h4>
+            <ul>
+                <li>Priority email support</li>
+                <li>Live chat assistance</li>
+                <li>Advanced analytics</li>
+                <li>Early access to new features</li>
+            </ul>
+        </div>
+        
+        <h2>🚀 Getting Started Checklist</h2>
+        
+        <div class="step-box">
+            <h3>Ready to optimize your resume? Follow this checklist:</h3>
+            <ol>
+                <li>✅ Create your account and login</li>
+                <li>✅ Prepare your current resume (PDF/DOCX)</li>
+                <li>✅ Find a job posting you're interested in</li>
+                <li>✅ Copy the complete job description</li>
+                <li>✅ Choose your template and settings</li>
+                <li>✅ Generate your optimized CV</li>
+                <li>✅ Review and download</li>
+                <li>✅ Apply with confidence!</li>
+            </ol>
+        </div>
+        
+        <div class="highlight">
+            <p><strong>🎉 Ready to transform your career?</strong> Start optimizing your resume now and land your dream job!</p>
+        </div>
+        
+        <a href="/" class="back-link">← Back to CVCraft</a>
+    </div>
+    
+    <script>
+        // Simple accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const isOpen = content.style.display === 'block';
+                
+                // Close all accordions
+                document.querySelectorAll('.accordion-content').forEach(c => {
+                    c.style.display = 'none';
+                });
+                
+                // Open clicked accordion if it was closed
+                if (!isOpen) {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
