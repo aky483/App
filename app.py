@@ -22,6 +22,10 @@ from cv_generator import generate_cv, generate_cover_letter, extract_resume_text
 from templates import get_available_templates, apply_template
 from utils import optimize_keywords, enforce_page_limit, get_gemini_response
 
+# Load secrets into environment
+os.environ["DATABASE_URL"] = st.secrets["DATABASE_URL"]
+os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
+
 # Initialize database
 init_db()
 
