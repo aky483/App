@@ -2,7 +2,7 @@ import re
 import os
 import time
 from typing import Dict, List, Any
-from google import genai
+import google.generativeai as genai
 from google.genai import types
 import streamlit as st
 from dotenv import load_dotenv
