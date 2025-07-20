@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 # Load secrets into environment
 os.environ["DATABASE_URL"] = st.secrets["DATABASE_URL"]
-os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 
 # Initialize Gemini client
 try:
