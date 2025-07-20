@@ -5,7 +5,7 @@ from datetime import datetime
 import PyPDF2 as pdf
 from docx import Document
 import google.generativeai as genai
-from google.genai import types
+from google.generativeai import types
 from pydantic import BaseModel
 from utils import optimize_keywords, enforce_page_limit
 from dotenv import load_dotenv
