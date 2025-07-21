@@ -148,19 +148,17 @@ def main():
 
     
     # Main content
-    tab1, tab2, tab3, tab4 = st.tabs(["🎯 Match Me to Job", "📄 CV Preview", "📊 Analytics", "💳 Billing"])
-    
+    tab1, tab2, tab3 = st.tabs(["🎯 Match Me to Job", "📊 Analytics", "💳 Billing"])
+
     with tab1:
         show_cv_generation_page()
     
     with tab2:
-        show_preview_page()
-    
-    with tab3:
         show_analytics_page()
     
-    with tab4:
+    with tab3:
         show_billing_page()
+
 
 def show_login_page():
     """Display login page"""
@@ -361,6 +359,46 @@ def show_cv_generation_page():
                 processing_time = time.time() - start_time
                 
                 st.success(f"✅ CV generated successfully in {processing_time:.1f} seconds!")
+                # === Inline Preview and Download After Generation ===
+                st.markdown("### 👀 Your Optimized CV")
+                
+                # Download buttons
+                col1, col2, col3 = st.columns(3)
+                
+                with col1:
+                    pdf_buffer = apply_template(
+                        st.session_state.cv_preview,
+                        st.session_state.selected_template
+                    )
+                    st.download_button(
+                        label="📥 Download PDF",
+                        data=pdf_buffer,
+                        file_name="optimized_cv.pdf",
+                        mime="application/pdf"
+                    )
+                
+                with col2:
+                    docx_buffer = create_word_document(st.session_state.cv_preview)
+                    st.download_button(
+                        label="📄 Download DOCX",
+                        data=docx_buffer,
+                        file_name="optimized_cv.docx",
+                        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    )
+                
+                with col3:
+                    if st.button("🔄 Regenerate CV"):
+                        st.session_state.cv_preview = None
+                        st.rerun()
+                
+                # Show preview content
+                st.markdown("### 📋 Preview Content")
+                st.markdown(st.session_state.cv_preview)
+                
+                # Inline ATS Analysis
+                st.markdown("### 📊 ATS Analysis")
+                analyze_ats_compatibility()
+
                 st.info("🔍 Click on the 'CV Preview' tab to review your optimized CV")
                 
                 # Deduct credits
